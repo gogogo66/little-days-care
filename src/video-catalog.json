@@ -1,0 +1,186 @@
+{
+  "verifiedAt": "2026-10-04",
+  "recommendedVideos": [
+    {
+      "id": "latch",
+      "title": "正确含接：观察嘴唇与下巴",
+      "officialTitle": "爱·从母乳开始......正确地含乳",
+      "provider": "香港卫生署家庭健康服务",
+      "sourceUrl": "https://www.fhs.gov.hk/sc_chi/mulit_med/breastfeeding/bf_vid_c6p4_4.html",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ikwQP56-eYc",
+      "officialEmbedUrl": "https://www.youtube.com/embed/ikwQP56-eYc",
+      "watchUrl": "https://www.youtube.com/watch?v=ikwQP56-eYc",
+      "posterUrl": "https://i.ytimg.com/vi/ikwQP56-eYc/hqdefault.jpg",
+      "durationSeconds": 49,
+      "language": "中文官方版",
+      "languageEvidence": "官方 sc_chi 页面提供独立视频ID和简体中文剧本，YouTube oEmbed 确认标题及 familyhealthservice 发布者；与 tc_chi 视频ID不同。未听音，不将简体页面本身视为普通话音轨的充分证据。",
+      "steps": [
+        "等宝宝张大嘴，下唇向外翻。",
+        "让下巴贴近乳房；可见上方乳晕比下方多。",
+        "应含住乳头与大部分乳晕，避免只含乳头。"
+      ],
+      "verification": {
+        "sourceHttpStatus": 200,
+        "oembedHttpStatus": 200,
+        "embedGetStatus": 200,
+        "previewPlayabilityStatus": {
+          "status": "OK",
+          "playableInEmbed": true,
+          "contextParams": "Q0FFU0FnZ0E="
+        },
+        "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
+        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+      },
+      "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
+      "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
+    },
+    {
+      "id": "bottle",
+      "title": "回应式瓶喂：让宝宝掌握节奏",
+      "officialTitle": "BB教喂奶 － 回应式喂哺",
+      "provider": "香港卫生署家庭健康服务",
+      "sourceUrl": "https://www.fhs.gov.hk/sc_chi/mulit_med/000067.html",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Srn4DGCyrA0",
+      "officialEmbedUrl": "https://www.youtube.com/embed/Srn4DGCyrA0",
+      "watchUrl": "https://www.youtube.com/watch?v=Srn4DGCyrA0",
+      "posterUrl": "https://i.ytimg.com/vi/Srn4DGCyrA0/hqdefault.jpg",
+      "durationSeconds": 403,
+      "language": "中文官方版",
+      "languageEvidence": "官方 sc_chi 页面提供独立视频ID和简体中文剧本，YouTube oEmbed 确认标题及 familyhealthservice 发布者；与 tc_chi 视频ID不同。未听音，不将简体页面本身视为普通话音轨的充分证据。",
+      "steps": [
+        "先洗手，半直立抱稳并承托头颈。",
+        "轻触上唇，等宝宝张嘴再含奶嘴。",
+        "奶瓶近水平，奶嘴前端有奶；按宝宝节奏暂停。",
+        "转头、停吸或推开奶瓶时停下来，不强迫喝完。"
+      ],
+      "verification": {
+        "sourceHttpStatus": 200,
+        "oembedHttpStatus": 200,
+        "embedGetStatus": 200,
+        "previewPlayabilityStatus": {
+          "status": "OK",
+          "playableInEmbed": true,
+          "contextParams": "Q0FFU0FnZ0E="
+        },
+        "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
+        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+      },
+      "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
+      "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
+    },
+    {
+      "id": "burping",
+      "title": "拍嗝：先托稳头颈，再轻拍",
+      "officialTitle": "怎样替婴儿扫风",
+      "provider": "香港卫生署家庭健康服务",
+      "sourceUrl": "https://www.fhs.gov.hk/sc_chi/mulit_med/000005.html",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/Hnflgm_ykD8",
+      "officialEmbedUrl": "https://www.youtube.com/embed/Hnflgm_ykD8",
+      "watchUrl": "https://www.youtube.com/watch?v=Hnflgm_ykD8",
+      "posterUrl": "https://i.ytimg.com/vi/Hnflgm_ykD8/hqdefault.jpg",
+      "durationSeconds": 46,
+      "language": "中文官方版",
+      "languageEvidence": "官方 sc_chi 页面提供独立视频ID和简体中文剧本，YouTube oEmbed 确认标题及 familyhealthservice 发布者；与 tc_chi 视频ID不同。未听音，不将简体页面本身视为普通话音轨的充分证据。",
+      "steps": [
+        "直立抱到肩上，或让宝宝坐在大腿上。",
+        "坐姿时承托胸部、下巴及头部，身体微微向前。",
+        "另一只手轻拍或向上抚背数分钟。",
+        "视频建议拍嗝后直立抱10–20分钟；睡觉仍应仰卧回婴儿床。"
+      ],
+      "verification": {
+        "sourceHttpStatus": 200,
+        "oembedHttpStatus": 200,
+        "embedGetStatus": 200,
+        "previewPlayabilityStatus": {
+          "status": "OK",
+          "playableInEmbed": true,
+          "contextParams": "Q0FFU0FnZ0E="
+        },
+        "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
+        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+      },
+      "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
+      "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
+    },
+    {
+      "id": "diaper",
+      "title": "换尿布：清洁、擦干、包好",
+      "officialTitle": "替宝宝换尿片",
+      "provider": "香港卫生署家庭健康服务",
+      "sourceUrl": "https://www.fhs.gov.hk/sc_chi/mulit_med/000004.html",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/pDibzPeTAiw",
+      "officialEmbedUrl": "https://www.youtube.com/embed/pDibzPeTAiw",
+      "watchUrl": "https://www.youtube.com/watch?v=pDibzPeTAiw",
+      "posterUrl": "https://i.ytimg.com/vi/pDibzPeTAiw/hqdefault.jpg",
+      "durationSeconds": 185,
+      "language": "中文官方版",
+      "languageEvidence": "官方 sc_chi 页面提供独立视频ID和简体中文剧本，YouTube oEmbed 确认标题及 familyhealthservice 发布者；与 tc_chi 视频ID不同。未听音，不将简体页面本身视为普通话音轨的充分证据。",
+      "steps": [
+        "物品先备齐，洗净双手。",
+        "逐次更换湿棉球，女宝宝从前往后擦。",
+        "臀部干爽后包上干净尿布，检查松紧。",
+        "不要把宝宝独自留在换片台或成人床上，最后洗手。"
+      ],
+      "verification": {
+        "sourceHttpStatus": 200,
+        "oembedHttpStatus": 200,
+        "embedGetStatus": 200,
+        "previewPlayabilityStatus": {
+          "status": "OK",
+          "playableInEmbed": true,
+          "contextParams": "Q0FFU0FnZ0E="
+        },
+        "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
+        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+      },
+      "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
+      "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
+    },
+    {
+      "id": "safe-sleep",
+      "title": "安全睡眠：仰卧、同室独立睡",
+      "officialTitle": "睡得安全　親子無憂",
+      "provider": "香港卫生署／政府新闻处",
+      "sourceUrl": "https://www.isd.gov.hk/chi/tvapi/24_md411.html",
+      "embedUrl": null,
+      "videoUrl": "https://isd.wecast.hk/playbacks/avc/news/2024/032116271-24_md411c/24_md411c.mp4",
+      "posterUrl": null,
+      "language": "粤语／繁体字幕",
+      "languageEvidence": "官方香港繁体电视宣传片，画面台词含“想有覺好瞓？”；简体网页与繁体网页使用同一24_md411c.mp4，不是独立普通话版本。音轨未听验。",
+      "steps": [
+        "每次睡觉让宝宝仰卧，使用自己的婴儿床。",
+        "婴儿床放在父母床旁，同室照护。",
+        "床面不要有杂物、毛绒玩具或松散被褥。"
+      ],
+      "verification": {
+        "sourceHttpStatus": 200,
+        "videoRangeGetStatus": 206,
+        "contentType": "video/mp4",
+        "contentRange": "bytes 0-1023/56503922",
+        "header": "已确认ftypmp42/MP4签名",
+        "frameRestrictions": "媒体响应未见X-Frame-Options/CSP frame-ancestors；使用video元素而非iframe。"
+      },
+      "reuse": "来源可链接；ISD重要告示要求事先批准使用图片、声音或录像，未见公开嵌入许可。不要重新托管，若无许可建议打开官方来源页。",
+      "rightsUrl": "https://www.isd.gov.hk/chi/notices.htm"
+    }
+  ],
+  "supplementaryPositionVideo": {
+    "sourceUrl": "https://www.fhs.gov.hk/sc_chi/mulit_med/breastfeeding/bf_vid_c6p4_2.html",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/zvJxYUc1em8",
+    "posterUrl": "https://i.ytimg.com/vi/zvJxYUc1em8/hqdefault.jpg",
+    "durationSeconds": 71,
+    "steps": [
+      "妈妈背部、前臂和双脚得到支持。",
+      "宝宝腹部贴近妈妈，脸朝乳房。",
+      "头和身体成一直线，避免扭颈或向前弯曲。"
+    ]
+  },
+  "implementationNotes": [
+    "FHS源页面X-Frame-Options=SAMEORIGIN且frame-ancestors self，不要把FHS页面放iframe。",
+    "嵌入YouTube播放器应使用referrerpolicy=\"strict-origin-when-cross-origin\"；无Referer时返回Error153。",
+    "官方YouTube iframe支持嵌入（previewPlayabilityStatus=OK, playableInEmbed=true）；YouTube.com / i.ytimg.com 在本测试网络被代理403阻止，youtube-nocookie.com 可访问。",
+    "始终显示打开官方来源页的备用链接。",
+    "没有下载或重托管任何视频，所有检索原页和JSON仅在/workspace/care-media-research。",
+    "旧版2017安抚、2018睡眠视频已排除，因示范内容不宜用于现代0–6月龄睡眠教学。"
+  ]
+}

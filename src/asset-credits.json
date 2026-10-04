@@ -1,0 +1,75 @@
+{
+  "assets": [
+    {
+      "name": "breastfeeding-attachment",
+      "file": "fhs-breastfeeding-attachment.png",
+      "from": "fhs-breast-extracted/photo-004.png",
+      "source_page": "https://www.fhs.gov.hk/english/health_info/child/20000.html",
+      "original_asset_url": "https://www.fhs.gov.hk/english/health_info/child/20000.pdf",
+      "location": "PDF page 59; printed page 55; Bringing your baby to the breast, third step (attachment photo)",
+      "caption_zh": "含接时让宝宝头部稍向后仰，下巴先贴近乳房，张大嘴含入乳头及较多乳晕；不要把后脑勺压向乳房。",
+      "alt_zh": "香港卫生署示范照片：宝宝头部稍后仰贴近乳房，成人在耳后及颈部提供支撑。",
+      "local_path": "/workspace/care-illustration-research/fhs-breastfeeding-attachment.png",
+      "type": "original photograph embedded in official PDF, extracted with pdfimages; no redrawing or generated content",
+      "attribution_zh": "图片来源：香港特别行政区政府卫生署家庭健康服务",
+      "reuse": "FHS permits non-commercial reproduction/dissemination with Department of Health duly acknowledged. Commercial use requires prior written authorization.",
+      "terms_url": "https://www.fhs.gov.hk/english/notice/notice.html",
+      "extracted": "2026-10-04"
+    },
+    {
+      "name": "bottle-feeding",
+      "file": "fhs-bottle-feeding.png",
+      "from": "fhs-bottle-extracted/photo-004.png",
+      "source_page": "https://www.fhs.gov.hk/english/health_info/child/12146.html",
+      "original_asset_url": "https://www.fhs.gov.hk/english/health_info/child/12146.pdf",
+      "location": "PDF page 18; printed page 17; How do I feed my baby, step 4",
+      "caption_zh": "抱稳宝宝呈半坐卧姿，支撑头颈；奶瓶保持接近水平、仅稍倾斜，让奶液充满奶嘴前端，并留意宝宝需要暂停的信号。",
+      "alt_zh": "香港卫生署示范照片：宝宝在成人臂弯内半坐卧，成人手持接近水平、稍微倾斜的奶瓶。",
+      "local_path": "/workspace/care-illustration-research/fhs-bottle-feeding.png",
+      "type": "original photograph embedded in official PDF, extracted with pdfimages; no redrawing or generated content",
+      "attribution_zh": "图片来源：香港特别行政区政府卫生署家庭健康服务",
+      "reuse": "FHS permits non-commercial reproduction/dissemination with Department of Health duly acknowledged. Commercial use requires prior written authorization.",
+      "terms_url": "https://www.fhs.gov.hk/english/notice/notice.html",
+      "extracted": "2026-10-04"
+    },
+    {
+      "name": "supported-burping",
+      "file": "fhs-supported-burping.png",
+      "from": "fhs-burp-extracted/photo-002.png",
+      "source_page": "https://www.fhs.gov.hk/english/health_info/child/12146.html",
+      "original_asset_url": "https://www.fhs.gov.hk/english/health_info/child/12146.pdf",
+      "location": "PDF page 20; printed page 19; How do I burp my baby, seated position",
+      "caption_zh": "让宝宝坐在大腿上，用手托稳下巴和胸部，避开喉部，再轻轻抚摸或拍背。",
+      "alt_zh": "香港卫生署示范照片：宝宝坐在成人大腿上，成人一手托住下巴与胸部，另一手准备轻拍背部。",
+      "local_path": "/workspace/care-illustration-research/fhs-supported-burping.png",
+      "type": "original photograph embedded in official PDF, extracted with pdfimages; no redrawing or generated content",
+      "attribution_zh": "图片来源：香港特别行政区政府卫生署家庭健康服务",
+      "reuse": "FHS permits non-commercial reproduction/dissemination with Department of Health duly acknowledged. Commercial use requires prior written authorization.",
+      "terms_url": "https://www.fhs.gov.hk/english/notice/notice.html",
+      "extracted": "2026-10-04"
+    },
+    {
+      "name": "bottle-hold",
+      "file": "bottle-hold.png",
+      "from": "fhs-bottle-extracted/photo-004.png",
+      "source_page": "https://www.fhs.gov.hk/english/health_info/child/12146.html",
+      "original_asset_url": "https://www.fhs.gov.hk/english/health_info/child/12146.pdf",
+      "location": "PDF page 18; printed page 17; How do I feed my baby, steps 1 and 2",
+      "caption_zh": "完整抱姿：成人坐稳，宝宝头和上身高于臀部，头颈由臂弯承托；以半坐卧姿喂奶。",
+      "alt_zh": "香港卫生署完整抱姿照片：成人坐稳抱着宝宝，宝宝头颈靠在臂弯，上身抬高，臀部较低。",
+      "local_path": "/workspace/care-illustration-research/fhs-bottle-feeding.png",
+      "type": "original photograph embedded in official PDF, extracted with pdfimages; no redrawing or generated content",
+      "attribution_zh": "图片来源：香港特别行政区政府卫生署家庭健康服务",
+      "reuse": "FHS permits non-commercial reproduction/dissemination with Department of Health duly acknowledged. Commercial use requires prior written authorization.",
+      "terms_url": "https://www.fhs.gov.hk/english/notice/notice.html",
+      "extracted": "2026-10-04"
+    }
+  ],
+  "notes": [
+    "These images are embedded PDF originals, so the exact downloadable original asset URL is the PDF URL; no public standalone URL was found.",
+    "Do not crop away supporting hands, infant face, or bottle angle. Use object-fit: contain or show the full image.",
+    "NHS and NICHD candidates were excluded as final recommendations because their terms reserve image rights; local copies remain only as research candidates.",
+    "FHS noncommercial reuse permission expressly covers text, graphics, drawings, diagrams, photographs and compilation of data.",
+    "Selected breastfeeding photo is the attachment step; the source also includes a tighter good-attachment close-up in fhs-breast-extracted/photo-000.png."
+  ]
+}
