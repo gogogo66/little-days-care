@@ -2,3 +2,7 @@
 node_modules/
 .sites-runtime/
 *.log
+
+.env
+.env.*
+!.env.example

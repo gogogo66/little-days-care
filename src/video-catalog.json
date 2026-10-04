@@ -29,7 +29,7 @@
           "contextParams": "Q0FFU0FnZ0E="
         },
         "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
-        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+        "playback": "2026-10-04实际排查：官方源页仅提供YouTube。测试网络对YouTube部分必要域名返回403，未能验证连续播放。不能把iframe HTTP200或playableInEmbed视为实际播放成功。本站默认提供独立的中文图解短片，原视频仍保留为可选入口。"
       },
       "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
       "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
@@ -63,7 +63,7 @@
           "contextParams": "Q0FFU0FnZ0E="
         },
         "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
-        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+        "playback": "2026-10-04实际排查：官方源页仅提供YouTube。测试网络对YouTube部分必要域名返回403，未能验证连续播放。不能把iframe HTTP200或playableInEmbed视为实际播放成功。本站默认提供独立的中文图解短片，原视频仍保留为可选入口。"
       },
       "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
       "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
@@ -97,7 +97,7 @@
           "contextParams": "Q0FFU0FnZ0E="
         },
         "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
-        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+        "playback": "2026-10-04实际排查：官方源页仅提供YouTube。测试网络对YouTube部分必要域名返回403，未能验证连续播放。不能把iframe HTTP200或playableInEmbed视为实际播放成功。本站默认提供独立的中文图解短片，原视频仍保留为可选入口。"
       },
       "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
       "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
@@ -131,7 +131,7 @@
           "contextParams": "Q0FFU0FnZ0E="
         },
         "poster": "官方 oEmbed 与播放器元数据均列出本URL；本环境 i.ytimg.com 域名被网络代理403阻止，因此未完成图片GET。",
-        "playback": "核验到官方发布与嵌入预览 playableInEmbed=true；未在浏览器完成实际音视频播放。"
+        "playback": "2026-10-04实际排查：官方源页仅提供YouTube。测试网络对YouTube部分必要域名返回403，未能验证连续播放。不能把iframe HTTP200或playableInEmbed视为实际播放成功。本站默认提供独立的中文图解短片，原视频仍保留为可选入口。"
       },
       "reuse": "优先嵌入官方YouTube，不下载重传。FHS允许注明来源的非商业复制和分发；商业使用需书面许可。",
       "rightsUrl": "https://www.fhs.gov.hk/sc_chi/notice/notice.html"
@@ -158,7 +158,8 @@
         "contentType": "video/mp4",
         "contentRange": "bytes 0-1023/56503922",
         "header": "已确认ftypmp42/MP4签名",
-        "frameRestrictions": "媒体响应未见X-Frame-Options/CSP frame-ancestors；使用video元素而非iframe。"
+        "frameRestrictions": "媒体响应未见X-Frame-Options/CSP frame-ancestors；使用video元素而非iframe。",
+        "playback": "2026-10-04在ISD官方页面实际点击，currentTime从4.94849秒持续增长到7.955885秒，readyState=4、paused=false。仅提供官方页外链。"
       },
       "reuse": "来源可链接；ISD重要告示要求事先批准使用图片、声音或录像，未见公开嵌入许可。不要重新托管，若无许可建议打开官方来源页。",
       "rightsUrl": "https://www.isd.gov.hk/chi/notices.htm"
@@ -181,6 +182,7 @@
     "官方YouTube iframe支持嵌入（previewPlayabilityStatus=OK, playableInEmbed=true）；YouTube.com / i.ytimg.com 在本测试网络被代理403阻止，youtube-nocookie.com 可访问。",
     "始终显示打开官方来源页的备用链接。",
     "没有下载或重托管任何视频，所有检索原页和JSON仅在/workspace/care-media-research。",
-    "旧版2017安抚、2018睡眠视频已排除，因示范内容不宜用于现代0–6月龄睡眠教学。"
+    "旧版2017安抚、2018睡眠视频已排除，因示范内容不宜用于现代0–6月龄睡眠教学。",
+    "2026-10-04排查12个FHS简繁英源页后未发现官方非YouTube视频流，默认播放改用本站自行制作的中文图解短片；清楚区分照片/步骤图解与官方连续真人视频。"
   ]
 }
