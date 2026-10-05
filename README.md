@@ -1,6 +1,6 @@
 # 小小长大 · 0–3 岁照护手册
 
-面向新手爸妈、祖辈和照护者的中文照护参考网站，重点覆盖 0–6 个月的喂养、奶量参考、睡眠、尿布观察与日常护理。支持按年龄和主题查找、大字显示、图文离线保存及打印。
+面向新手爸妈、祖辈和照护者的中文照护参考网站，重点覆盖 0–6 个月的喂养、奶量参考、睡眠、尿布观察与日常护理。支持站内搜索、按年龄和主题查找、大字显示、图文离线保存及打印，无需登录。
 
 在线访问：https://little-days-care.huangyimin0926.chatgpt.site
 
@@ -19,6 +19,7 @@ python3 -m http.server 8080 --directory dist
 
 - `src/template.html`、`src/style.css`：页面结构与样式。
 - `src/app.js`、`src/content.js`：交互和照护内容。
+- `src/navigation.js`、`src/search.js`：长页快捷导航、保存／打印菜单及本地搜索。
 - `src/legacy-care.json`、`src/medical.html`：分龄参考与就医提示。
 - `src/video-catalog.json`、`src/asset-credits.json`：视频来源、图片出处、核验和使用条件。
 - `src/clip-catalog.json`：本站中文图解短片的规格和来源记录。
@@ -29,6 +30,14 @@ python3 -m http.server 8080 --directory dist
 - `scripts/generate-clips.cjs`：图解生成脚本。仅重新制作图解时需要 Playwright、Chromium、FFmpeg、FFprobe 和 Noto Sans CJK 字体；普通网页构建使用已提交的成品，不需要这些工具。
 
 修改 `src/` 后重新构建，并一起提交 `src/` 和 `dist/`。仓库不包含私有凭据、用户数据或运行时会话文件。
+
+可选浏览器回归测试：准备 Playwright 与 Chromium 后运行 `node scripts/check-usability.cjs`；使用系统 Chromium 时可指定 `CHROMIUM_PATH=/path/to/chromium`。脚本自启本地服务，检查搜索排序、年龄／喂养方式、危险词、问答定位、窄屏大字和离线搜索，结束后清理临时文件。测试依赖不影响静态构建。
+
+## 查找与阅读
+
+首页和底部常驻栏都能搜索。搜索在浏览器内检索手册现有内容，支持“母乳加奶粉”“几天不拉”等常见说法；关键词不会发送到服务器，保存的离线 HTML 也可搜索。默认按当前年龄筛选，可切换到全部年龄；明确的年龄词（如“4个月奶量”）会更新筛选。结果标明年龄和喂养方式，点击后定位图文并展开相关问答。重要就医提示不受年龄筛选限制。没有覆盖的问题会提示未找到或仅展示相关内容，不生成诊断或新增奶量建议。
+
+喂养有母乳亲喂、配方奶、混合喂养、母乳瓶喂四种入口。混合喂养以有效进食、尿布和生长观察为主，不套用全配方奶数量。底栏可随时换年龄／主题、搜索、保存／打印或回到顶部。大字模式打开视频时先显示可放大的中文步骤，可再切换播放视频。
 
 ## 内容与适用范围
 
