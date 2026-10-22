@@ -46,7 +46,81 @@
       ],
       "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
       "coverHttpStatus": 200
-    }
+    },
+    "provider": "bilibili",
+    "providerLabel": "B站",
+    "localGuide": "burping"
+  },
+  {
+    "id": "douyin-diaper-pingjie",
+    "provider": "douyin",
+    "title": "新生儿宝宝更换尿不湿的操作手法，新手宝爸宝妈们赶紧学起来#换尿不湿正确方法 #新生儿护理 #育儿经验分享",
+    "shortTitle": "换尿裤：侧身垫好，再理顺腿围",
+    "author": "萍姐育儿",
+    "durationSeconds": 117,
+    "url": "https://www.douyin.com/video/7358069300688735507/",
+    "embedUrl": "https://open.douyin.com/player/video?vid=7358069300688735507&autoplay=0",
+    "cover": "",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "focus": "看清垫入尿裤和整理腿围的小动作；这段没有演示完整清洁流程。",
+    "steps": [
+      "先把新尿裤展开，打开两侧粘贴，放在伸手就能拿到的位置。",
+      "扶稳宝宝，轻轻侧身垫好尿裤，再把前后片整理平整。",
+      "贴好后看看腰围是否舒适，再理出两侧腿围，别把褶边卷在里面。"
+    ],
+    "tipIds": [
+      "changing-put-supplies-within-reach"
+    ],
+    "note": "这段主要看垫尿裤和整理腿围，没有完整清洁流程。取下旧尿裤后先清洁、轻拍干；尺码不合就换合适的，不靠“斜贴”硬凑，也别拽脚踝提起宝宝。",
+    "verifiedAt": "2026-10-22",
+    "verification": {
+      "method": "官方公开iframe接口返回成功；全片按8秒间隔观察画面与烧录字幕，未连续核听完整音轨；新建无登录浏览器实际播放42秒。",
+      "observed": [
+        {
+          "at": "00:00–00:24",
+          "description": "实际婴儿躺在护理面上，照料者整理衣物、展开新尿裤和后片。"
+        },
+        {
+          "at": "00:32–00:56",
+          "description": "更换、整理臀下尿裤及前后片；可见侧身和手扶一侧腿的动作，不能由静帧保证全程用力方式。"
+        },
+        {
+          "at": "01:20–01:44",
+          "description": "前缘下翻、腰围松紧、两侧腿围褶边整理。"
+        },
+        {
+          "at": "01:10–01:12",
+          "description": "原片提出尿裤大小不合时斜贴，本站不采纳。"
+        },
+        {
+          "at": "01:52",
+          "description": "原片有每次使用护臀霜说法，本站不将其写为所有宝宝一律要求。"
+        }
+      ],
+      "limits": [
+        "不是完整清洁教程，未展示擦洗和拍干。",
+        "作者身份按平台署名，未核验护理资质。",
+        "全片按8秒间隔帧审，未连续完整音轨审核。",
+        "不支持未观察到的脊椎伤害等因果断言。"
+      ],
+      "playback": {
+        "duration": 116.566667,
+        "time": 41.972658,
+        "paused": false,
+        "error": null
+      },
+      "officialEmbedApi": "https://open.douyin.com/api/douyin/v1/video/get_iframe_by_video?video_id=7358069300688735507",
+      "officialEmbedDocumentation": "https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/iframe-player/get-iframe-by-video",
+      "reuse": "仅使用官方嵌入，不表示获得下载后重新托管许可。"
+    },
+    "providerLabel": "抖音",
+    "orientation": "portrait",
+    "localGuide": "diaper"
   },
   {
     "id": "BV1r44y1D7T7",
@@ -99,7 +173,10 @@
       ],
       "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
       "coverHttpStatus": 200
-    }
+    },
+    "provider": "bilibili",
+    "providerLabel": "B站",
+    "localGuide": "diaper"
   },
   {
     "id": "BV1H64y1w75k",
@@ -151,6 +228,9 @@
       ],
       "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
       "coverHttpStatus": 200
-    }
+    },
+    "provider": "bilibili",
+    "providerLabel": "B站",
+    "localGuide": "bottle"
   }
 ]

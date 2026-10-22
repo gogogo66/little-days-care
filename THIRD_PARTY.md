@@ -25,7 +25,9 @@ NHS 使用条款：https://www.nhs.uk/our-policies/terms-and-conditions/
 
 香港政府新闻处告示：https://www.isd.gov.hk/chi/notices.htm
 
-新增照护者真人短视频通过 B 站提供的 `player.bilibili.com` 播放器嵌入，原视频、音轨和封面均属于原权利人。原作者、标题、原页和播放器地址见 `src/caregiver-videos.json`；封面使用原平台远程地址，仓库不存放这些视频或封面的副本。链接和嵌入不代表原作者为本站背书，也不授予下载重传或商业使用权。
+照护者真人短视频通过 B 站的 `player.bilibili.com` 和抖音的 `open.douyin.com/player/video` 官方播放器嵌入，原视频、音轨和封面均属于原权利人。原作者、标题、原页和播放器地址见 `src/caregiver-videos.json`；封面使用原平台远程地址，仓库不存放这些视频或封面的副本。链接和嵌入不代表原作者为本站背书，也不授予下载重传或商业使用权。
+
+抖音使用其[官方 iframe 接口](https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/iframe-player/get-iframe-by-video)，视频编号为 `7358069300688735507`。本站没有下载或重传这段视频，不把临时签名媒体地址作为永久播放源；卡片使用文字预览，原片画面由官方播放器呈现。
 
 生活小窍门的文字由本站根据已核对的动作资料独立整理，并非对第三方视频逐字转录。每条动作的来源与编辑说明见 `src/everyday-tips.json`。视频中的营销描述或效果宣称不作为本站照护建议。
 

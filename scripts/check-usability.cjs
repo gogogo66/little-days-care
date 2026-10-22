@@ -12,11 +12,37 @@ async function cleanup(){await browser?.close();await new Promise(resolve=>serve
  await page.goto(base+'/');
  assert.equal(await page.locator('#topic-tabs button[aria-current=page]').getAttribute('data-topic'),'tips');
  assert.equal(await page.locator('.tip-card').count(),10);
- assert.equal(await page.locator('.creator-card').count(),3);
+ const creatorCount=await page.evaluate(()=>CAREGIVER_VIDEOS.length);
+ assert.equal(await page.locator('.creator-card').count(),creatorCount);
  assert.equal(await page.locator('.tip-card .source-note[open]').count(),0);
- for(const [ageId,count] of [['week',10],['month',10],['young',10],['middle',10],['older',3],['toddler',2]]){await page.locator(`[data-age="${ageId}"]`).click();assert.equal(await page.locator('.tip-card').count(),count);assert.equal(await page.locator('.creator-card').count(),['older','toddler'].includes(ageId)?0:3);}
+ for(const [ageId,count] of [['week',10],['month',10],['young',10],['middle',10],['older',3],['toddler',2]]){await page.locator(`[data-age="${ageId}"]`).click();assert.equal(await page.locator('.tip-card').count(),count);assert.equal(await page.locator('.creator-card').count(),['older','toddler'].includes(ageId)?0:creatorCount);}
  await page.locator('[data-age="week"]').click();
- for(const id of await page.evaluate(()=>CAREGIVER_VIDEOS.map(v=>v.id))){await page.locator(`[data-caregiver-video="${id}"]`).first().click();assert.equal(await page.locator('#everyday-video-dialog').isVisible(),true);assert.ok((await page.locator('#creator-player iframe').getAttribute('src')).startsWith('https://player.bilibili.com/'));await page.locator('#creator-read').click();assert.equal(await page.locator('#creator-reading').isVisible(),true);assert.equal(await page.locator('#creator-player iframe').count(),0);await page.keyboard.press('Escape');await page.waitForFunction(()=>document.querySelector('#everyday-video-content').childElementCount===0);}
+ const originalUrl=page.url();
+ // UI and offline recovery must work even when every external player is unavailable.
+ await page.route('https://**/*',route=>route.abort());
+ for(const v of await page.evaluate(()=>CAREGIVER_VIDEOS)){
+  const opener=page.locator(`[data-caregiver-video="${v.id}"]`).first();await opener.click();
+  assert.equal(await page.locator('#everyday-video-dialog').isVisible(),true);
+  assert.equal(await page.locator('#creator-player iframe').getAttribute('src'),v.embedUrl);
+  assert.equal(await page.locator('#everyday-video-content .source-note[open]').count(),0);
+  assert.equal(page.url(),originalUrl);assert.equal(page.context().pages().length,1);
+  await page.locator('.creator-help>summary').click();
+  if(v.localGuide){
+   await page.locator('.creator-help [data-creator-view=guide]').click();
+   assert.equal(await page.locator('#creator-player iframe').count(),0);
+   const video=page.locator('#creator-player video');await video.evaluate(v=>v.play());
+   await page.waitForFunction(()=>document.querySelector('#creator-player video').currentTime>0);
+   assert.ok((await page.locator('#creator-player-note').innerText()).includes('和上面的真人原片不同'));
+  }
+  await page.locator('#creator-read').click();assert.equal(await page.locator('#creator-reading').isVisible(),true);
+  assert.equal(await page.locator('#creator-player iframe,#creator-player video').count(),0);
+  await page.locator('#creator-watch').click();assert.equal(await page.locator('#creator-player iframe').count(),1);
+  for(const width of [320,390]){await page.setViewportSize({width,height:844});assert.ok(await page.locator('#everyday-video-dialog').evaluate(el=>el.scrollWidth<=el.clientWidth),width+' creator dialog overflow');}
+  await page.keyboard.press('Escape');await page.waitForFunction(()=>document.querySelector('#everyday-video-content').childElementCount===0);
+  assert.equal(await opener.evaluate(el=>el===document.activeElement),true);
+ }
+ await page.unroute('https://**/*');
+
 
  async function search(q){if(!await page.locator('#search-dialog').isVisible())await page.locator('#open-search').click();await page.locator('#search-query').fill(q);await page.locator('#dialog-search button[type=submit]').click();}
  for(const [q,want] of [['喂奶手酸','手肘'],['旧尿布','旧尿布'],['穿衣服','长袖'],['宝宝睡不踏实','睡']]){await search(q);assert.ok((await page.locator('.search-result').first().innerText()).includes(want),q);}

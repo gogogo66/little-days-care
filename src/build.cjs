@@ -11,6 +11,15 @@ videos.latch.backupUrl='https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding
 let html=fs.readFileSync(path.join(__dirname,'template.html'),'utf8');let med=fs.readFileSync(path.join(__dirname,'medical.html'),'utf8').replace(/^<section[^>]*>/,'').replace(/<\/section>$/,'');
 const tipData=JSON.parse(fs.readFileSync(path.join(__dirname,'everyday-tips.json'),'utf8'));
 const creatorVideos=JSON.parse(fs.readFileSync(path.join(__dirname,'caregiver-videos.json'),'utf8'));
+const playerHosts={bilibili:'player.bilibili.com',douyin:'open.douyin.com'};
+const creatorIds=new Set();
+for(const v of creatorVideos){
+ if(creatorIds.has(v.id))throw new Error('Duplicate creator video '+v.id);creatorIds.add(v.id);
+ const embed=new URL(v.embedUrl);
+ if(embed.protocol!=='https:'||!playerHosts[v.provider]||embed.hostname!==playerHosts[v.provider])throw new Error('Unrecognized official player '+v.id);
+ if(!v.providerLabel||!v.steps?.length||new URL(v.url).protocol!=='https:')throw new Error('Incomplete creator video '+v.id);
+ if(v.localGuide&&!videos[v.localGuide])throw new Error('Missing related guide '+v.id);
+}
 const inlineJSON=data=>JSON.stringify(data).replace(/</g,'\\u003c');
 const content=fs.readFileSync(path.join(__dirname,'content.js'),'utf8');const app=['app.js','navigation.js','search.js','everyday.js'].map(file=>fs.readFileSync(path.join(__dirname,file),'utf8')).join('\n');
 html=html.replace('/*STYLES*/',fs.readFileSync(path.join(__dirname,'style.css'),'utf8')).replace('/*MEDICAL*/',med).replace('/*DATA*/',`const LEGACY=${JSON.stringify(legacy)};\nconst ASSETS=${JSON.stringify(assets)};\nconst VIDEOS=${JSON.stringify(videos)};\nconst EVERYDAY_TIPS=${inlineJSON(tipData)};\nconst CAREGIVER_VIDEOS=${inlineJSON(creatorVideos)};\n${content}`).replace('/*APP*/',()=>app);
