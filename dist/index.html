@@ -35,7 +35,7 @@ input:focus-visible{outline:3px solid #8a74d2;outline-offset:3px}
 @media(max-width:700px){.creator-grid{grid-template-columns:1fr;gap:12px}.creator-card{display:grid;grid-template-columns:40% minmax(0,1fr)}.creator-cover{height:100%;aspect-ratio:auto;min-height:160px}.creator-description{padding:13px}.creator-description h3{font-size:1rem}.creator-description>p:not(.tip-meta){font-size:.875rem}.creator-play{width:39px;height:39px}.large-type .creator-card{grid-template-columns:1fr}.large-type .creator-cover{aspect-ratio:16/9;min-height:0}.large-type .topic-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tip-card{padding:20px}.creator-player,.creator-player iframe{min-height:340px}.source-note{font-size:.875rem}}
 @media print{.creator-shelf{display:none}.tip-card{break-inside:avoid}.source-note>summary{display:none}.source-note{display:block!important}.tip-picture{display:block}.tip-picture>summary{display:none}.tip-picture .lesson-visual img{max-height:150px}.tip-note{break-inside:avoid}.tip-group .grid{grid-template-columns:1fr 1fr;break-before:avoid}.tip-group>.quick-title{break-after:avoid}}
 
-.creator-player video{display:block;width:100%;height:100%;object-fit:contain}.creator-player.portrait-player{aspect-ratio:9/16;max-width:360px;min-height:0;margin-inline:auto}.portrait-player iframe{min-height:0}.creator-help{margin:14px 0;padding:13px 16px;border:1px solid var(--line);border-radius:12px}.creator-help>summary{cursor:pointer;color:var(--purple);font-size:.9rem}.creator-help .video-actions{align-items:flex-start;flex-wrap:wrap}#creator-playback-status:empty{display:none}
+.creator-player video{display:block;width:100%;height:100%;object-fit:contain}.creator-player.portrait-player{position:relative;aspect-ratio:324/720;max-width:324px;min-height:0;margin-inline:auto}.creator-player.portrait-player iframe{position:absolute;inset:0;width:324px;height:720px;min-height:0;transform-origin:top left}.creator-help{margin:14px 0;padding:13px 16px;border:1px solid var(--line);border-radius:12px}.creator-help>summary{cursor:pointer;color:var(--purple);font-size:.9rem}.creator-help .video-actions{align-items:flex-start;flex-wrap:wrap}#creator-playback-status:empty{display:none}
 .creator-cover-label{position:absolute;top:9px;left:9px;right:9px;width:fit-content;max-width:calc(100% - 18px);border-radius:6px;padding:3px 7px;font-size:.75rem;font-weight:500;color:white;background:#17162bdc;line-height:1.5;text-align:left}
 </style></head>
 <body><a class="skip" href="#main">跳到照护内容</a><div class="shell">
@@ -419,6 +419,7 @@ function openCaregiverVideo(id,trigger){
  const dialog=$('#everyday-video-dialog');dialog._opener=trigger;$('#everyday-video-title').textContent=v.shortTitle;
  $('#everyday-video-content').innerHTML=`<p class="creator-author">${esc(v.author)} · ${esc(v.providerLabel)} · ${esc(duration(v.durationSeconds))}</p>${v.note?`<p class="tip-note">${esc(v.note)}</p>`:''}<div class="video-view-switch" role="group" aria-label="选择观看方式"><button class="play-button secondary" id="creator-watch" data-creator-view="watch" aria-pressed="false">▶ 在本站播放</button><button class="play-button secondary" id="creator-read" data-creator-view="read" aria-pressed="false">看动作步骤</button>${guide?'<button class="play-button secondary" id="creator-guide" data-creator-view="guide" aria-pressed="false">相关中文图解</button>':''}</div><section id="creator-reading" class="reader-steps" hidden><h3>这次留意这个小动作</h3><p>${esc(v.focus)}</p><ol class="tip-steps">${v.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></section><div id="creator-watching" hidden><div id="creator-player" class="creator-player"></div><p id="creator-player-note" class="micro-note"></p><p id="creator-playback-status" class="micro-note" role="status"></p><details class="creator-help"><summary>视频没出来？在这里继续看</summary><div class="video-actions"><button class="text-button" data-creator-view="read">看动作步骤</button>${guide?'<button class="text-button" data-creator-view="guide">换成本站中文图解</button>':''}<button class="text-button" data-creator-view="watch">重试真人视频</button></div><p class="micro-note">不用跳转。播放器若提示登录、打开 App 或暂时不可用，可以先用上面的方式继续。</p></details></div><details class="source-note refs"><summary>作者与原片出处</summary><p>《${esc(v.title)}》 · ${esc(v.author)}</p><p>真人示范使用${esc(v.providerLabel)}官方播放器，需联网。本站的动作步骤为独立整理。</p><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">查看原片出处（打开${esc(v.providerLabel)}）</a></details>`;
  const view=mode=>{
+  dialog._playerResize?.disconnect();dialog._playerResize=null;
   const reading=mode==='read',local=mode==='guide'&&guide;
   $('#creator-reading').hidden=!reading;$('#creator-watching').hidden=reading;
   $$('#everyday-video-content .video-view-switch button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.creatorView===mode)));
@@ -433,6 +434,13 @@ function openCaregiverVideo(id,trigger){
    video.addEventListener('error',failure);video.querySelector('source').addEventListener('error',failure);
   }else{
    player.innerHTML=`<iframe src="${esc(v.embedUrl)}" title="${esc(v.shortTitle)}，${esc(v.author)}的真人示范" allow="fullscreen; picture-in-picture; encrypted-media" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+   if(v.orientation==='portrait'){
+    // The official Douyin player has a 324 × 720 minimum layout, including its controls.
+    // Scale the complete frame so narrow screens preserve subtitles and platform attribution.
+    const frame=player.querySelector('iframe');
+    const fit=()=>{frame.style.transform=`scale(${player.clientWidth/324})`};
+    fit();dialog._playerResize=new ResizeObserver(fit);dialog._playerResize.observe(player);
+   }
    $('#creator-player-note').textContent='轻点画面里的播放键即可观看。'+v.providerLabel+'官方播放器，需要联网。';
   }
   dialog.scrollTop=0;
@@ -441,5 +449,5 @@ function openCaregiverVideo(id,trigger){
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-caregiver-video]');if(b)openCaregiverVideo(b.dataset.caregiverVideo,b);});
 document.addEventListener('error',e=>{if(e.target.matches?.('.creator-cover img'))e.target.hidden=true;},true);
-$('#everyday-video-dialog').addEventListener('close',()=>{$('#everyday-video-content').innerHTML='';$('#everyday-video-dialog')._opener?.focus({preventScroll:true});});
+$('#everyday-video-dialog').addEventListener('close',()=>{$('#everyday-video-dialog')._playerResize?.disconnect();$('#everyday-video-dialog')._playerResize=null;$('#everyday-video-content').innerHTML='';$('#everyday-video-dialog')._opener?.focus({preventScroll:true});});
 </script></body></html>

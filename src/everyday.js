@@ -20,6 +20,7 @@ function openCaregiverVideo(id,trigger){
  const dialog=$('#everyday-video-dialog');dialog._opener=trigger;$('#everyday-video-title').textContent=v.shortTitle;
  $('#everyday-video-content').innerHTML=`<p class="creator-author">${esc(v.author)} · ${esc(v.providerLabel)} · ${esc(duration(v.durationSeconds))}</p>${v.note?`<p class="tip-note">${esc(v.note)}</p>`:''}<div class="video-view-switch" role="group" aria-label="选择观看方式"><button class="play-button secondary" id="creator-watch" data-creator-view="watch" aria-pressed="false">▶ 在本站播放</button><button class="play-button secondary" id="creator-read" data-creator-view="read" aria-pressed="false">看动作步骤</button>${guide?'<button class="play-button secondary" id="creator-guide" data-creator-view="guide" aria-pressed="false">相关中文图解</button>':''}</div><section id="creator-reading" class="reader-steps" hidden><h3>这次留意这个小动作</h3><p>${esc(v.focus)}</p><ol class="tip-steps">${v.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></section><div id="creator-watching" hidden><div id="creator-player" class="creator-player"></div><p id="creator-player-note" class="micro-note"></p><p id="creator-playback-status" class="micro-note" role="status"></p><details class="creator-help"><summary>视频没出来？在这里继续看</summary><div class="video-actions"><button class="text-button" data-creator-view="read">看动作步骤</button>${guide?'<button class="text-button" data-creator-view="guide">换成本站中文图解</button>':''}<button class="text-button" data-creator-view="watch">重试真人视频</button></div><p class="micro-note">不用跳转。播放器若提示登录、打开 App 或暂时不可用，可以先用上面的方式继续。</p></details></div><details class="source-note refs"><summary>作者与原片出处</summary><p>《${esc(v.title)}》 · ${esc(v.author)}</p><p>真人示范使用${esc(v.providerLabel)}官方播放器，需联网。本站的动作步骤为独立整理。</p><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">查看原片出处（打开${esc(v.providerLabel)}）</a></details>`;
  const view=mode=>{
+  dialog._playerResize?.disconnect();dialog._playerResize=null;
   const reading=mode==='read',local=mode==='guide'&&guide;
   $('#creator-reading').hidden=!reading;$('#creator-watching').hidden=reading;
   $$('#everyday-video-content .video-view-switch button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.creatorView===mode)));
@@ -34,6 +35,13 @@ function openCaregiverVideo(id,trigger){
    video.addEventListener('error',failure);video.querySelector('source').addEventListener('error',failure);
   }else{
    player.innerHTML=`<iframe src="${esc(v.embedUrl)}" title="${esc(v.shortTitle)}，${esc(v.author)}的真人示范" allow="fullscreen; picture-in-picture; encrypted-media" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+   if(v.orientation==='portrait'){
+    // The official Douyin player has a 324 × 720 minimum layout, including its controls.
+    // Scale the complete frame so narrow screens preserve subtitles and platform attribution.
+    const frame=player.querySelector('iframe');
+    const fit=()=>{frame.style.transform=`scale(${player.clientWidth/324})`};
+    fit();dialog._playerResize=new ResizeObserver(fit);dialog._playerResize.observe(player);
+   }
    $('#creator-player-note').textContent='轻点画面里的播放键即可观看。'+v.providerLabel+'官方播放器，需要联网。';
   }
   dialog.scrollTop=0;
@@ -42,4 +50,4 @@ function openCaregiverVideo(id,trigger){
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-caregiver-video]');if(b)openCaregiverVideo(b.dataset.caregiverVideo,b);});
 document.addEventListener('error',e=>{if(e.target.matches?.('.creator-cover img'))e.target.hidden=true;},true);
-$('#everyday-video-dialog').addEventListener('close',()=>{$('#everyday-video-content').innerHTML='';$('#everyday-video-dialog')._opener?.focus({preventScroll:true});});
+$('#everyday-video-dialog').addEventListener('close',()=>{$('#everyday-video-dialog')._playerResize?.disconnect();$('#everyday-video-dialog')._playerResize=null;$('#everyday-video-content').innerHTML='';$('#everyday-video-dialog')._opener?.focus({preventScroll:true});});
