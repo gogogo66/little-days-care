@@ -19,13 +19,14 @@ function getCareIndex(){
    const methods=t.id==='feeding'&&!['older','toddler'].includes(a.id)?['breast','formula','mixed','expressed']:['breast'];
    for(const method of methods){
     Object.assign(state,{age:a.id,topic:t.id,method});
-    const template=document.createElement('template');template.innerHTML=({feeding,sleep,diaper,care,videos}[t.id]());
+    const template=document.createElement('template');template.innerHTML=({tips,feeding,sleep,diaper,care,videos}[t.id]());
     searchBlocks(template.content).forEach((el,i)=>{
      let title=el.querySelector('h3,summary,caption,strong')?.textContent.trim();
      if(el.matches('.stats'))title=method==='formula'?'这个年龄的全配方奶参考':method==='expressed'?'母乳瓶喂：按需、暂停、看整体':'母乳亲喂：次数与有效进食';
      const text=blockText(el);title=title||text.split(/[。；]/)[0];
      const video=el.querySelector('[data-video]')?.dataset.video;
-     entries.push({age:a.id,topic:t.id,method:methods.length>1?method:null,key:`care-result-${i}`,title,body:text,extra:video?VIDEOS[video].steps.join(' '):''});
+     const creator=el.matches('.creator-card')?CAREGIVER_VIDEOS.find(v=>v.id===el.querySelector('[data-caregiver-video]')?.dataset.caregiverVideo):null;
+     entries.push({age:a.id,topic:t.id,method:methods.length>1?method:null,key:`care-result-${i}`,title,body:text,creatorId:creator?.id,extra:creator?'真人 真人视频 真人短视频 月嫂 经验分享 '+creator.steps.join(' '):video?VIDEOS[video].steps.join(' '):''});
     });
    }
   }
@@ -47,11 +48,16 @@ function readQueryAge(s){
  return id?{id,text:s.replace(m[0],'')}:null;
 }
 const SEARCH_FAMILIES=[
+ {test:/小窍门|小技巧|民间|月嫂|宝妈|省力|带娃技巧/,topic:'tips',title:/./,terms:[]},
+ {test:/手酸|胳膊酸|手肘|垫胳膊|喂奶.*累|喂奶.*[腰背].*[酸疼]|抱娃.*累/,topic:'tips',title:/手肘|胳膊/,terms:['手肘'],boost:70},
+ {test:/旧尿布|卷尿布|包脏尿布/,topic:'tips',title:/旧尿布/,terms:['旧尿布']},
+ {test:/穿衣|穿袖|连体衣|穿衣服/,topic:'tips',title:/衣袖|穿衣/,terms:['衣袖']},
+ {test:/洗澡准备|澡后|洗完澡/,topic:'tips',title:/毛巾|洗澡/,terms:['毛巾']},
  {id:'stool-frequency',test:/不拉|没拉|没便便|没大便|排便少|攒肚|便秘|不排便/,topic:'diaper',title:/几天不拉|排便少/,terms:['便便柔软','干硬','约6周']},
  {test:/红屁股|红屁屁|红臀|尿布疹|屁股红/,topic:'care',title:/轻柔清洁|拍干|刷牙和清洁/,terms:['及时换','及时更换','保持干爽'],related:true},
  {test:/混合喂养|混喂|母乳加奶粉|母乳.*配方|补奶|补喂/,topic:'feeding',method:'mixed',title:/母乳＋配方奶|先看吃奶|再看尿布/,terms:['混合喂养','补多少','补喂量']},
  {test:/挤.*母乳|母乳瓶喂|瓶喂母乳|吸奶器|泵奶|母乳装奶瓶/,topic:'feeding',method:'expressed',title:/母乳瓶喂/,terms:['母乳瓶喂','回应式瓶喂']},
- {test:/夜里哭|晚上哭|夜醒|夜哭|哄不睡|哭闹|哄睡|放下就醒|睡觉|入睡|睡前/,topic:'sleep',title:/放下就醒|先看看|放慢节奏|重复简单|轻柔|睡前流程/,terms:['安抚','醒来哭','睡前']},
+ {test:/夜里哭|晚上哭|夜醒|夜哭|哄不睡|哭闹|哄睡|放下就醒|睡觉|入睡|睡前|睡不踏实|睡不安稳|睡不稳/,topic:'sleep',title:/放下就醒|先看看|放慢节奏|重复简单|轻柔|睡前流程/,terms:['安抚','醒来哭','睡前']},
  {test:/吐奶|溢奶|喂完吐|拍嗝|反流/,topic:'feeding',title:/吐一点奶|拍嗝/,terms:['拍嗝','嘴角流出']},
  {test:/尿少|尿布干|没尿|湿尿布少|尿量少|几片尿布|脱水|排尿|尿布次数/,topic:'diaper',title:/先看这里|观察表|湿尿布明显少|更大宝宝/,terms:['尿少','湿尿布','尿是否明显减少']},
  {test:/奶不够|没吃饱|母乳不足|奶量不足|吃得少|喝奶少|频繁吃奶|一直找奶/,topic:'feeding',title:/奶量少于|有效进食|先看吃奶|再看尿布/,terms:['频繁索食','频繁找奶','吞咽','不强迫']},
@@ -83,7 +89,7 @@ function searchCare(raw,ageId){
   if(!families.length&&!score){const hits=grams.filter(g=>body.includes(g));if(hits.length>=Math.max(1,Math.ceil(grams.length*.6)))score=hits.length*5;}
   for(const f of families){
    if(f.medical){if(item.topic==='medical'&&f.medical.test(item.body.replace(/\s/g,'')))score+=450;continue;}
-   if(item.topic===f.topic){if(f.title?.test(item.title))score+=90;score+=(f.terms||[]).filter(t=>item.body.includes(t)).length*18;}
+   if(item.topic===f.topic){if(f.title?.test(item.title))score+=90+(f.boost||0);score+=(f.terms||[]).filter(t=>item.body.includes(t)).length*18;}
   }
   if(!score)continue;
   if(method&&item.method&&item.method!==method)score-=150;
@@ -97,7 +103,7 @@ function searchCare(raw,ageId){
   scored.push({...item,score});
  }
  scored.sort((a,b)=>b.score-a.score);
- const seen=new Set();return scored.filter(x=>{const key=[x.age,x.topic,x.body].join('|');if(seen.has(key))return false;seen.add(key);return true;});
+ const seen=new Set();return scored.filter(x=>{const key=x.creatorId?'creator:'+x.creatorId:[x.age,x.topic,x.body].join('|');if(seen.has(key))return false;seen.add(key);return true;});
 }
 function showSearch(value=''){
  $('#search-age').innerHTML=`${AGES.map(a=>`<option value="${a.id}" ${a.id===state.age?'selected':''}>${esc(a.label)}</option>`).join('')}<option value="all">全部年龄</option>`;

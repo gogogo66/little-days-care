@@ -1,0 +1,156 @@
+[
+  {
+    "id": "BV1SQyPBuEuZ",
+    "title": "简单上肩拍嗝",
+    "shortTitle": "上肩拍嗝：抱起和放回的小动作",
+    "author": "杭州月嫂丹姐",
+    "durationSeconds": 99,
+    "url": "https://www.bilibili.com/video/BV1SQyPBuEuZ/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1SQyPBuEuZ&page=1&autoplay=0&danmaku=0",
+    "cover": "https://i0.hdslb.com/bfs/archive/1cb34535a2c845e4a40031b5ae4089b637b5bbe4.jpg",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "focus": "一手托住头颈、一手托臀，再把宝宝贴近肩上；保持口鼻露出，放回时也托稳头颈。",
+    "steps": [
+      "一手托头颈、一手托臀，让宝宝贴近你的肩上。",
+      "让口鼻露在外面，轻抚或轻拍背部。",
+      "换回臂弯前先托稳头颈和臀部，再慢慢换姿势。"
+    ],
+    "tipIds": [],
+    "note": "只借鉴托抱过程；轻抚或轻拍即可，不必按固定次数拍，也不必每次拍出嗝。手不要压住喉咙，口鼻别埋进肩巾。",
+    "verifiedAt": "2026-10-22",
+    "verification": {
+      "method": "实际临时提取公开视频，每3秒截帧覆盖00:00–01:36，人工查看画面与烧录中文字幕。未完成连续音频听审。",
+      "observed": [
+        {
+          "time": "00:18–00:33",
+          "detail": "演示从横抱转换为肩抱：一手托头颈、另一手托臀，抬高后再换手承托。"
+        },
+        {
+          "time": "00:42–00:51",
+          "detail": "侧身展示宝宝脸部在肩外，字幕提醒不要捂住口鼻。"
+        },
+        {
+          "time": "01:12–01:24",
+          "detail": "从肩上放回臂弯前先扶住后脑/头颈，再承托臀部转回横抱。"
+        }
+      ],
+      "limits": [
+        "开头的喂后2–3分钟不是所有宝宝的固定等待规则。",
+        "拍两下、撸一下是作者节奏，不是必要的医学步骤。",
+        "截帧无法量化拍背力度，也不能证明所有瞬间头颈支撑充分。"
+      ],
+      "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
+      "coverHttpStatus": 200
+    }
+  },
+  {
+    "id": "BV1r44y1D7T7",
+    "title": "新生儿穿连体衣服换纸尿裤不容易漏尿的方法#创作灵感#新生儿#新生儿护理#月嫂#北京月嫂王姐@Dr.郑仕平#母婴",
+    "shortTitle": "换纸尿裤：侧身垫好，再整理腿围",
+    "author": "北京金牌月嫂王姐a",
+    "durationSeconds": 59,
+    "url": "https://www.bilibili.com/video/BV1r44y1D7T7/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1r44y1D7T7&page=1&autoplay=0&danmaku=0",
+    "cover": "https://i2.hdslb.com/bfs/archive/14ca570d1416c21639cf0708f04e0489630cc79c.jpg",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "focus": "打开连体衣下部，让宝宝轻轻侧身垫入尿裤；贴好后理平腰部，拨开两侧腿围。",
+    "steps": [
+      "解开连体衣下部，轻扶宝宝侧身，把尿裤垫好。",
+      "转回仰卧，理平腰部再贴好两侧粘贴。",
+      "看看腿围有没有卷进去，轻轻拨开，别越贴越紧。"
+    ],
+    "tipIds": [],
+    "note": "动作放轻，别拽脚踝或勒紧腰围；这段主要演示穿戴，没有完整展示清洁流程。",
+    "verifiedAt": "2026-10-22",
+    "verification": {
+      "method": "实际临时提取公开视频，每2秒截帧覆盖00:00–00:56，人工查看画面与烧录中文字幕。未完成连续音频听审。",
+      "observed": [
+        {
+          "time": "00:00–00:12",
+          "detail": "只打开连体衣下部扣子，衣服留在上身。"
+        },
+        {
+          "time": "00:14–00:20",
+          "detail": "协助宝宝侧身，将展开的尿裤放在腰臀下，再转回仰卧。"
+        },
+        {
+          "time": "00:26–00:38",
+          "detail": "理平腹部和腰部后贴好两侧粘贴，检查松紧。"
+        },
+        {
+          "time": "00:40–00:50",
+          "detail": "用手指把腿围处折进去的防漏边拨出来，避免卡住腿部。"
+        }
+      ],
+      "limits": [
+        "视频中的“肚子露出来容易着凉”不应转为疾病因果说明。",
+        "没有清洁步骤，不能当成换尿裤全过程。",
+        "没有展示可推广的腰围数字标准，不要为了防漏越勒越紧。"
+      ],
+      "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
+      "coverHttpStatus": 200
+    }
+  },
+  {
+    "id": "BV1H64y1w75k",
+    "title": "适合母乳宝宝的瓶喂方式：控速瓶喂法",
+    "shortTitle": "控速瓶喂：给宝宝留出停顿",
+    "author": "猫猫熊母婴笔记",
+    "durationSeconds": 248,
+    "url": "https://www.bilibili.com/video/BV1H64y1w75k/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1H64y1w75k&page=1&autoplay=0&danmaku=0",
+    "cover": "https://i2.hdslb.com/bfs/archive/40b2ee3bb0299d33282e80a3e2911f559540f169.jpg",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "focus": "抱稳宝宝，等宝宝张嘴再送入奶嘴；喂奶中留出停顿，宝宝转头或停下来时别催着喝。",
+    "steps": [
+      "抱稳宝宝，托好头颈，轻触嘴唇等主动张口。",
+      "喂奶时看吞咽，停吸或转头就给宝宝休息。",
+      "宝宝合嘴、推开时结束，不摇奶瓶或敲击催喝。"
+    ],
+    "tipIds": [
+      "feeding-pause-the-bottle"
+    ],
+    "note": "给宝宝暂停，看的是吞咽和饥饱信号。不要照搬原片的“先空吸30秒”或固定吸吮次数。",
+    "verifiedAt": "2026-10-22",
+    "verification": {
+      "method": "实际取得完整248秒公开视频画面；每5秒截帧覆盖00:00–04:05，人工查看画面与烧录中文字幕。不是连续逐字音频转录。",
+      "observed": [
+        {
+          "time": "01:40–01:50",
+          "detail": "切入真人抱着真实宝宝的瓶喂示范；宝宝上身较直立，头颈由成人手臂/手部支撑。"
+        },
+        {
+          "time": "02:00–02:30",
+          "detail": "讲解先轻触嘴唇、等张口再送入；实拍可见奶瓶接近水平，成人持续手持。"
+        },
+        {
+          "time": "03:25–03:50",
+          "detail": "实拍展示宝宝吸吮停顿时下调奶瓶角度，随后恢复；末段不建议宝宝停下时靠摇奶瓶或敲击催奶。"
+        }
+      ],
+      "limits": [
+        "片中“先吸吮30秒”且先无奶液的做法不作为推荐动作。",
+        "“3–5次”吸吞后停顿是讲解示例，不是每个宝宝应遵循的硬规则。",
+        "奶嘴形状和含奶液比例不能按视频一概而论，应使用适合宝宝的流速并看吞咽表现。",
+        "作者是中文讲解者，实拍示范部分为插入片段，不能声称这是作者亲自给自己宝宝喂奶。"
+      ],
+      "playback": "在真实iframe中无登录起播，随后跳至40秒并继续播放到41秒以上；readyState=4，paused=false，error=null。未出现30秒预览门槛。",
+      "coverHttpStatus": 200
+    }
+  }
+]

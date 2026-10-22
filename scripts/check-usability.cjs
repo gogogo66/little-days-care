@@ -10,7 +10,16 @@ async function cleanup(){await browser?.close();await new Promise(resolve=>serve
  browser=await chromium.launch({...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),headless:true,args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:390,height:844},acceptDownloads:true});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/');
+ assert.equal(await page.locator('#topic-tabs button[aria-current=page]').getAttribute('data-topic'),'tips');
+ assert.equal(await page.locator('.tip-card').count(),10);
+ assert.equal(await page.locator('.creator-card').count(),3);
+ assert.equal(await page.locator('.tip-card .source-note[open]').count(),0);
+ for(const [ageId,count] of [['week',10],['month',10],['young',10],['middle',10],['older',3],['toddler',2]]){await page.locator(`[data-age="${ageId}"]`).click();assert.equal(await page.locator('.tip-card').count(),count);assert.equal(await page.locator('.creator-card').count(),['older','toddler'].includes(ageId)?0:3);}
+ await page.locator('[data-age="week"]').click();
+ for(const id of await page.evaluate(()=>CAREGIVER_VIDEOS.map(v=>v.id))){await page.locator(`[data-caregiver-video="${id}"]`).first().click();assert.equal(await page.locator('#everyday-video-dialog').isVisible(),true);assert.ok((await page.locator('#creator-player iframe').getAttribute('src')).startsWith('https://player.bilibili.com/'));await page.locator('#creator-read').click();assert.equal(await page.locator('#creator-reading').isVisible(),true);assert.equal(await page.locator('#creator-player iframe').count(),0);await page.keyboard.press('Escape');await page.waitForFunction(()=>document.querySelector('#everyday-video-content').childElementCount===0);}
+
  async function search(q){if(!await page.locator('#search-dialog').isVisible())await page.locator('#open-search').click();await page.locator('#search-query').fill(q);await page.locator('#dialog-search button[type=submit]').click();}
+ for(const [q,want] of [['喂奶手酸','手肘'],['旧尿布','旧尿布'],['穿衣服','长袖'],['宝宝睡不踏实','睡']]){await search(q);assert.ok((await page.locator('.search-result').first().innerText()).includes(want),q);}
  const expectations=[['几天不拉','几天不拉'],['母乳加奶粉','母乳＋配方奶'],['挤出来的母乳喝多少','母乳瓶喂'],['4个月每顿喝多少','这个年龄的全配方奶参考'],['吐绿色的奶','绿色或黄绿色呕吐'],['叫不醒','难以唤醒'],['发烧38度','38'],['12小时没尿','12小时'],['红屁股','清洁']];
  for(const [q,want] of expectations){await search(q);const first=await page.locator('.search-result').first().innerText();assert.ok(first.replace(/\s/g,'').includes(want),q+' → '+first);console.log(q+' → '+first.replace(/\n/g,' ').slice(0,180));}
  await search('4个月每顿喝多少');assert.equal(await page.locator('#search-age').inputValue(),'middle');assert.ok((await page.locator('.search-result').first().innerText()).includes('4–5个月不套6个月参考'));

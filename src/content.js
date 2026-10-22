@@ -6,7 +6,7 @@ const AGES=[
 {id:'older',label:'7–11 个月',short:'7–11 个月',legacy:'older',feedingNote:'母乳或婴儿配方奶继续，辅食质地随能力逐步增加。',sleepNote:'一岁以内每次入睡仍仰卧放下，睡眠空间保持平坦、坚实、空。'},
 {id:'toddler',label:'1–3 岁',short:'1–3 岁',legacy:'toddler',feedingNote:'规律提供多样食物，坐稳吃饭，成人在旁，不强迫吃完。',sleepNote:'可预期的睡前活动与温和、一致的回应，帮助孩子慢慢安定。'}
 ];
-const TOPICS=[{id:'feeding',label:'喂奶与奶量',title:'怎么喂，吃多少？'},{id:'sleep',label:'哄睡与安抚',title:'从安抚到安全入睡'},{id:'diaper',label:'尿布与便便',title:'次数、颜色，一起看'},{id:'care',label:'洗护与安全',title:'一步一步，照顾日常'},{id:'videos',label:'视频示范',title:'看一遍，再跟着做'}];
+const TOPICS=[{id:'tips',label:'带娃小窍门',title:'少一点手忙脚乱'},{id:'feeding',label:'喂奶与奶量',title:'怎么喂，吃多少？'},{id:'sleep',label:'哄睡与安抚',title:'从安抚到安全入睡'},{id:'diaper',label:'尿布与便便',title:'次数、颜色，一起看'},{id:'care',label:'洗护与安全',title:'一步一步，照顾日常'},{id:'videos',label:'视频示范',title:'看一遍，再跟着做'}];
 const EXTRA_SOURCES={
 fhsBottle:{title:'香港卫生署 · 奶瓶喂哺指引',url:'https://www.fhs.gov.hk/sc_chi/health_info/child/12146.html'},
 fhsBreast:{title:'香港卫生署 · 母乳喂哺：新生婴儿篇',url:'https://www.fhs.gov.hk/tc_chi/health_info/child/12172.html'},

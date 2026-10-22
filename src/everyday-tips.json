@@ -1,0 +1,274 @@
+[
+  {
+    "id": "feeding-support-elbows",
+    "title": "喂奶前，先给手肘找个靠",
+    "scene": "瓶喂时抱一会儿就手酸，越喂越耸肩。",
+    "group": "feeding",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "洗净双手，坐稳在有靠背的椅子上。",
+      "手肘下垫个小垫子，让肩膀放松下来。",
+      "再抱宝宝，让头颈靠着臂弯、上身稍抬高。"
+    ],
+    "note": "垫子只托大人的手臂，别垫起奶瓶让宝宝自己吃。",
+    "sources": [
+      {
+        "title": "香港卫生署家庭健康服务：奶瓶喂哺指引",
+        "url": "https://www.fhs.gov.hk/sc_chi/health_info/child/12146.html"
+      }
+    ],
+    "evidence": "2026-10-22核对：来源的奶瓶喂哺步骤直接支持靠背座椅、垫子承托手肘，以及头颈靠臂弯的半坐卧姿势；并禁止垫高奶瓶让宝宝独自吃奶。",
+    "image": "bottleHold"
+  },
+  {
+    "id": "feeding-bring-baby-close",
+    "title": "亲喂时，把宝宝往自己这边靠",
+    "scene": "喂着喂着弯下腰，宝宝也伸着脖子找奶。",
+    "group": "feeding",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "托住宝宝的身体，让他整个人朝向你。",
+      "把宝宝抱近，鼻尖先对着乳头。",
+      "看看耳朵、肩膀、胯部是不是在一条线上。"
+    ],
+    "note": "宝宝的头要能轻轻后仰；含乳一直疼，及时请助产士或哺乳顾问帮忙看姿势。",
+    "sources": [
+      {
+        "title": "NHS：Latching on（含乳）",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/how-to-breastfeed/latching-on/"
+      },
+      {
+        "title": "NHS：Breastfeeding positions（哺乳姿势）",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/how-to-breastfeed/breastfeeding-positions/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS直接支持抱近宝宝全身、鼻尖与乳头同高、头可稍后仰，以及耳肩髋对齐；本条只提炼抱近与对齐动作，不代替完整含乳指导。",
+    "image": "attachment",
+    "localVideo": "latch"
+  },
+  {
+    "id": "feeding-pause-the-bottle",
+    "title": "瓶喂到一半，也可以停一停",
+    "scene": "宝宝别过脸、停了吸吮，大人还惦记着瓶里剩的奶。",
+    "group": "feeding",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "喂的时候看看宝宝，有没有停吸、转头或推奶瓶。",
+      "看到这些信号，轻轻移开奶瓶，让他缓一缓。",
+      "还想吃再继续；合嘴、推开，就结束这一顿。"
+    ],
+    "note": "别敲奶瓶催着喝，也不用为了喝光剩奶再塞回去。",
+    "sources": [
+      {
+        "title": "香港卫生署家庭健康服务：奶瓶喂哺指引",
+        "url": "https://www.fhs.gov.hk/sc_chi/health_info/child/12146.html"
+      }
+    ],
+    "evidence": "2026-10-22核对：来源明确列出停吸、转头和推瓶等暂停信号，支持移开奶瓶、按宝宝意愿继续或停止，并要求不催促、不强迫喝完。"
+  },
+  {
+    "id": "feeding-burp-on-lap",
+    "title": "肩膀抱累了，换到腿上轻拍",
+    "scene": "想帮宝宝拍嗝，肩膀和手臂已经抱得发酸。",
+    "group": "feeding",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "自己先坐稳，扶着宝宝坐在腿上，脸朝外。",
+      "手掌托胸口，手指托下巴和下颌，避开喉咙。",
+      "扶宝宝稍稍前倾，另一只手轻摸或轻拍背。"
+    ],
+    "note": "全程托好头颈，别让宝宝自己坐着，也不用一直拍到出嗝。",
+    "sources": [
+      {
+        "title": "NHS：Burping your baby（给宝宝拍嗝）",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/how-to-breastfeed/burping-your-baby/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS的腿上拍嗝姿势直接支持朝外坐腿、托胸及下颌、避开喉咙、稍前倾并轻拍或揉背，也说明无需花很长时间拍嗝；省力场景是编辑编排。",
+    "image": "burping",
+    "localVideo": "burping"
+  },
+  {
+    "id": "soothing-quiet-night-care",
+    "title": "夜里，把灯和声音都调小",
+    "scene": "半夜喂完奶，大人越逗，宝宝反而越精神。",
+    "group": "soothing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "留一盏能看清操作的小灯，声音也放轻。",
+      "照顾好吃奶和换尿布的需要，先不逗着玩。",
+      "结束后，让宝宝仰卧回到平坦、坚实、没有杂物的独立小床。"
+    ],
+    "note": "小床放在大人同一房间；少些刺激不代表马上睡着，也不等于省掉夜奶。",
+    "sources": [
+      {
+        "title": "NHS：Helping your baby to sleep（帮助宝宝睡眠）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/"
+      },
+      {
+        "title": "NHS：Sudden infant death syndrome（安全睡眠建议）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/sudden-infant-death-syndrome-sids/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS支持夜间低照明、轻声少互动、喂好和必要换尿布后放回床；安全睡眠页支持仰卧、独立平坦睡面和至少前6个月同室。未承诺延长睡眠或减少喂养。"
+  },
+  {
+    "id": "soothing-check-needs-first",
+    "title": "哭了先看看，再抱近轻声哄",
+    "scene": "一听见哭就着急，抱着走来走去还是没头绪。",
+    "group": "soothing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "先看看有没有找奶、张嘴等饿的信号。",
+      "再看看尿布，脏了或湿了就换好。",
+      "照顾好需求后，抱近一点，轻声说话或慢慢摸背。"
+    ],
+    "note": "哭也可能是身体不舒服；哭声和平常不同、精神差或不肯吃奶，及时联系医生。",
+    "sources": [
+      {
+        "title": "NHS：Soothing a crying baby（安抚哭泣的宝宝）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/soothing-a-crying-baby/"
+      },
+      {
+        "title": "NHS：Latching on（饥饿信号与含乳）",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/feeding-your-baby/breastfeeding/how-to-breastfeed/latching-on/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS把饥饿和湿脏尿布列为常见哭因，并支持抱近、说话和轻抚背部；含乳页支持张嘴寻乳等信号。检查顺序是便于照护者记忆的编辑编排，不是诊断流程。"
+  },
+  {
+    "id": "changing-put-supplies-within-reach",
+    "title": "打开尿布前，东西先排到手边",
+    "scene": "尿布都解开了，才发现干净尿布和擦洗用品还没拿。",
+    "group": "changing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle",
+      "older",
+      "toddler"
+    ],
+    "steps": [
+      "先洗手，把干净尿布、擦洗用品和干毛巾放手边。",
+      "铺好换尿布垫，给自己留个顺手的位置。",
+      "东西齐了，再放好宝宝、打开旧尿布。"
+    ],
+    "note": "别让宝宝独自留在高处；发现漏拿东西，就带宝宝一起去拿。",
+    "sources": [
+      {
+        "title": "NHS：How to change your baby's nappy（换尿布）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/how-to-change-your-babys-nappy/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS要求换前洗手并把所需用品集中准备，列出尿布、擦洗用品、垫子及干毛巾，也禁止在换尿布台上独留宝宝；准备动作同样适用于仍穿尿布的较大孩子。"
+  },
+  {
+    "id": "changing-roll-and-fasten-used-nappy",
+    "title": "旧尿布卷一卷，用自己的粘贴扣好",
+    "scene": "换完尿布，脏的那片摊在一旁，不好收拾。",
+    "group": "changing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle",
+      "older",
+      "toddler"
+    ],
+    "steps": [
+      "把旧纸尿裤的脏面朝里，轻轻卷起来。",
+      "用两侧粘贴扣住，别让它又摊开。",
+      "妥善丢弃，安置好宝宝后洗净双手。"
+    ],
+    "note": "只适用于一次性纸尿裤；垃圾袋放在宝宝够不到的地方。",
+    "sources": [
+      {
+        "title": "NHS：How to change your baby's nappy（尿布卫生）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/how-to-change-your-babys-nappy/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS直接支持把一次性尿布卷起、用原有粘贴封住后丢弃，并要求换后洗手；动作与月龄无关，适用于仍使用这类尿布的孩子。"
+  },
+  {
+    "id": "changing-bunch-sleeve-before-dressing",
+    "title": "穿长袖，先把袖子收成一小圈",
+    "scene": "宝宝的小手总卡在长袖里，越找越着急。",
+    "group": "changing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle"
+    ],
+    "steps": [
+      "先把长袖收拢，轻轻撑开袖口。",
+      "你的手从袖口伸进去，轻轻握住宝宝的小手。",
+      "把衣袖带过小手，再慢慢理顺袖子。"
+    ],
+    "note": "移动的是衣袖，别拉宝宝胳膊；卡住就退回一点，重新整理。",
+    "sources": [
+      {
+        "title": "Pregnancy, Birth and Baby：Dressing a newborn（给新生儿穿衣）",
+        "url": "https://www.pregnancybirthbaby.org.au/babies/daily-care/dressing-a-newborn"
+      }
+    ],
+    "evidence": "2026-10-22实际读取官方页面HTML核对：来源直接支持收拢长袖并撑开、成人手穿过袖口轻握宝宝手，再把衣袖套上，也明确不要拉宝宝手臂；保留在0–6个月筛选。"
+  },
+  {
+    "id": "changing-bath-towel-ready",
+    "title": "洗澡前，先给毛巾找好位置",
+    "scene": "宝宝刚抱出水，才发现毛巾还叠着、衣服也没找齐。",
+    "group": "changing",
+    "ages": [
+      "week",
+      "month",
+      "young",
+      "middle",
+      "older"
+    ],
+    "steps": [
+      "先把干毛巾摊好，干净尿布和衣服放在旁边。",
+      "确认东西都伸手可拿，再抱宝宝来洗。",
+      "洗好就用毛巾轻轻按干，皮肤褶皱也照顾到。"
+    ],
+    "note": "宝宝在水里时一刻也不能离开；漏拿东西，先把宝宝抱出来一起去拿。",
+    "sources": [
+      {
+        "title": "NHS：Washing and bathing your baby（清洁与洗澡）",
+        "url": "https://www.nhs.uk/baby/caring-for-a-newborn/washing-and-bathing-your-baby/"
+      }
+    ],
+    "evidence": "2026-10-22核对：NHS要求洗前把毛巾、尿布和衣服备在手边，洗后轻轻按干并留意褶皱，且任何月龄都须由成人持续看护；先摊开毛巾是基于备齐用品的编辑转化。"
+  }
+]
